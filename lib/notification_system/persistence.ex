@@ -26,7 +26,7 @@ defmodule NotificationSystem.Persistence do
       error ->
         Logger.error("Failed to create schema: #{inspect(error)}")
     end
-a
+
     # Startovanje
     :mnesia.start()
 
