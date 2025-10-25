@@ -24,7 +24,7 @@ A distributed publish-subscribe notification system implemented in Elixir using 
 
 ```bash
 # Clone the repository
-git clone https://github.com//notification_system.git
+git clone git@github.com:miljanb99/notification_system.git
 cd notification_system
 
 # Install dependencies
