@@ -34,7 +34,7 @@ mix deps.get
 mix compile
 ```
 
-## Quick Start
+## Quick start
 
 ```bash
 # Start interactive shell
@@ -52,13 +52,13 @@ NotificationSystem.publish("orders", %{order_id: 123, amount: 99.99})
 NotificationSystem.stats()
 ```
 
-## Running Tests
+## Running tests
 
 ```bash
 mix test
 ```
 
-## Distributed Mode
+## Distributed mode
 
 Start multiple nodes:
 
@@ -80,15 +80,15 @@ NotificationSystem.connect_node(:"node1@127.0.0.1")
 NotificationSystem.global_publish("cluster_topic", %{data: "hello"})
 ```
 
-## Advanced Features
+## Advanced features
 
-### Message Persistence
+### Message persistence
 
 ```elixir
 NotificationSystem.publish("orders", %{id: 1}, persist: true, priority: 8)
 ```
 
-### Priority Routing
+### Priority routing
 
 ```elixir
 NotificationSystem.publish("urgent", %{alert: "critical"},
@@ -97,7 +97,7 @@ NotificationSystem.publish("urgent", %{alert: "critical"},
 )
 ```
 
-### Content Filtering
+### Content filtering
 
 ```elixir
 NotificationSystem.add_routing_rule("premium", fn msg ->
@@ -105,7 +105,7 @@ NotificationSystem.add_routing_rule("premium", fn msg ->
 end)
 ```
 
-### Message Encryption
+### Message encryption
 
 ```elixir
 key = NotificationSystem.generate_key()
@@ -115,7 +115,7 @@ NotificationSystem.publish("secure", %{secret: "data"},
 )
 ```
 
-### Performance Benchmarking
+### Performance benchmarking
 
 ```elixir
 NotificationSystem.benchmark()
@@ -145,7 +145,7 @@ Typical benchmarks on modern hardware:
 - **Scalability**: Linear up to ~1000 subscribers
 - **Memory**: ~2KB per subscriber process
 
-## Project Structure
+## Project structure
 
 ```
 notification_system/
