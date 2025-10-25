@@ -4,16 +4,16 @@ A distributed publish-subscribe notification system implemented in Elixir using 
 
 ## Features
 
-- **Actor Model Concurrency**: Thousands of independent processes
-- **Fault Tolerance**: Supervision trees with automatic process restart
-- **Distributed Computing**: Multi-node communication
-- **Message Persistence**: Mnesia distributed database
-- **Delivery Guarantees**: At-least-once delivery with acknowledgments
-- **Dead Letter Queue**: Failed message handling
-- **Priority Routing**: Content-based filtering
-- **Rate Limiting**: Token bucket algorithm
-- **End-to-End Encryption**: AES-256-GCM
-- **Performance Metrics**: Prometheus-compatible export
+- **Actor model concurrency**: Thousands of independent processes
+- **Fault tolerance**: Supervision trees with automatic process restart
+- **Distributed computing**: Multi-node communication
+- **Message persistence**: Mnesia distributed database
+- **Delivery guarantees**: At-least-once delivery with acknowledgments
+- **Dead letter queue**: Failed message handling
+- **Priority routing**: Content-based filtering
+- **Rate limiting**: Token bucket algorithm
+- **End-to-End encryption**: AES-256-GCM
+- **Performance metrics**: Prometheus-compatible export
 
 ## Requirements
 
