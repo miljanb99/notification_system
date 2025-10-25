@@ -15,7 +15,7 @@ defmodule NotificationSystem.ClusterManager do
         {:error, :connection_failed}
 
       :ignored ->
-        Logger.warn("Node connection ignored (local node?)")
+        Logger.warning("Node connection ignored (local node?)")
         {:error, :ignored}
     end
   end

@@ -75,7 +75,7 @@ defmodule NotificationSystem.DeadLetterQueue do
 
   @impl true
   def handle_cast({:add, message_id, reason}, state) do
-    Logger.warn("Message #{message_id} added to DLQ: #{inspect(reason)}")
+    Logger.warning("Message #{message_id} added to DLQ: #{inspect(reason)}")
     Persistence.mark_failed(message_id)
 
     new_state = %{state | failed_count: state.failed_count + 1}

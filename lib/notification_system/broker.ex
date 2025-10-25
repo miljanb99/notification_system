@@ -44,7 +44,7 @@ defmodule NotificationSystem.Broker do
 
     case NotificationSystem.RateLimiter.check_rate(topic) do
       {:error, :rate_limited} ->
-        Logger.warn("Message rate limited for topic: #{topic}")
+        Logger.warning("Message rate limited for topic: #{topic}")
         NotificationSystem.Metrics.record_error(:rate_limited, topic)
         {:noreply, state}
 

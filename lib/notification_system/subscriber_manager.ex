@@ -32,7 +32,7 @@ defmodule NotificationSystem.SubscriberManager do
         {:ok, pid}
 
       {:error, {:already_started, pid}} ->
-        Logger.warn("Subscriber already exists")
+        Logger.warning("Subscriber already exists")
         {:ok, pid}
 
       {:error, reason} ->

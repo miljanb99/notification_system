@@ -22,5 +22,5 @@ end
 
 # Test environment
 if config_env() == :test do
-  config :logger, level: :warn
+  config :logger, level: :warning
 end

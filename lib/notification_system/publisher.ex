@@ -38,7 +38,7 @@ defmodule NotificationSystem.Publisher do
           {:error, _} -> message  # Fall back to unencrypted
         end
       else
-        Logger.warn("Encryption requested but no key provided")
+        Logger.warning("Encryption requested but no key provided")
         message
       end
     else

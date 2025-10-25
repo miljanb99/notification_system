@@ -174,7 +174,7 @@ defmodule NotificationSystem.Persistence do
 
     transaction = fn ->
       :mnesia.foldl(
-        fn {_, id, _, _, timestamp, _, _, _} = record, acc ->
+        fn {_, id, _, _, timestamp, _, _, _} = _record, acc ->
           if DateTime.compare(timestamp, cutoff) == :lt do
             :mnesia.delete({@table_name, id})
             acc + 1

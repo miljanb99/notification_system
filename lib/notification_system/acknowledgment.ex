@@ -71,7 +71,7 @@ defmodule NotificationSystem.Acknowledgment do
   def handle_cast({:ack, message_id}, state) do
     case Map.get(state.pending, message_id) do
       nil ->
-        Logger.warn("Received ACK for unknown message: #{message_id}")
+        Logger.warning("Received ACK for unknown message: #{message_id}")
         {:noreply, state}
 
       _info ->
@@ -93,7 +93,7 @@ defmodule NotificationSystem.Acknowledgment do
   def handle_cast({:nack, message_id, reason}, state) do
     case Map.get(state.pending, message_id) do
       nil ->
-        Logger.warn("Received NACK for unknown message: #{message_id}")
+        Logger.warning("Received NACK for unknown message: #{message_id}")
         {:noreply, state}
 
       info ->
@@ -109,7 +109,7 @@ defmodule NotificationSystem.Acknowledgment do
             nack_count: state.nack_count + 1
           }
 
-          Logger.warn("Message #{message_id} exceeded max retries, moved to DLQ")
+          Logger.warning("Message #{message_id} exceeded max retries, moved to DLQ")
           {:noreply, new_state}
         else
           # Zakazuje ponovni pokusaj sa exponential backoff

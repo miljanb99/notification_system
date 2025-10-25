@@ -11,7 +11,7 @@ defmodule NotificationSystem.Benchmark do
   """
   require Logger
 
-  alias NotificationSystem.{SubscriberManager, Metrics}
+  alias NotificationSystem.SubscriberManager
 
   @doc """
   Pokrece kompletan benchmark.
